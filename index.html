@@ -1,186 +1,251 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mohammed Bougtab - Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammed Bougtab | Portfolio</title>
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-800">
-  <!-- Navigation -->
-  <header class="fixed w-full bg-white shadow z-10">
-    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
-      <a href="#home" class="text-2xl font-bold">Mohammed Bougtab</a>
-      <nav>
-        <ul class="flex space-x-4 text-gray-700">
-          <li><a href="#about" class="hover:text-blue-600">About</a></li>
-          <li><a href="#experience" class="hover:text-blue-600">Experience</a></li>
-          <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
-          <li><a href="#education" class="hover:text-blue-600">Education</a></li>
-          <li><a href="#certifications" class="hover:text-blue-600">Certifications</a></li>
-          <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
-          <li><a href="#languages" class="hover:text-blue-600">Languages</a></li>
-          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-        </ul>
+<body class="bg-white text-gray-800 leading-relaxed">
+
+  <!-- Navigation (Fixed Header) -->
+  <header class="fixed top-0 w-full bg-white shadow z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#hero" class="text-2xl font-bold">Mohammed Bougtab</a>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#experience" class="hover:text-blue-600">Experience</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#education" class="hover:text-blue-600">Education</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+        <a href="#languages" class="hover:text-blue-600">Languages</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
       </nav>
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="menu-button" class="text-gray-800 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile navigation menu (hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+      <a href="#about" class="block px-4 py-2 border-b border-gray-200">About</a>
+      <a href="#experience" class="block px-4 py-2 border-b border-gray-200">Experience</a>
+      <a href="#projects" class="block px-4 py-2 border-b border-gray-200">Projects</a>
+      <a href="#education" class="block px-4 py-2 border-b border-gray-200">Education</a>
+      <a href="#skills" class="block px-4 py-2 border-b border-gray-200">Skills</a>
+      <a href="#languages" class="block px-4 py-2 border-b border-gray-200">Languages</a>
+      <a href="#contact" class="block px-4 py-2">Contact</a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="fade-in-section flex flex-col items-center justify-center h-screen bg-gray-50 px-4 scroll-mt-16 transition-all duration-1000 ease-out">
-    <h1 class="text-5xl font-bold mb-4">Mohammed Bougtab</h1>
-    <p class="text-2xl text-gray-600">Computer Engineering Student</p>
-    <div class="flex space-x-6 mt-6 text-gray-700">
-      <a href="mailto:bougtab.mohammed03@gmail.com" class="hover:text-blue-600 transition">Email</a>
-      <a href="https://linkedin.com/in/mohammed-bougtab-6430141b0" target="_blank" class="hover:text-blue-600 transition">LinkedIn</a>
-      <a href="https://github.com/BougtabMohammed" target="_blank" class="hover:text-blue-600 transition">GitHub</a>
-      <a href="https://x.com/MohammedBougtab" target="_blank" class="hover:text-blue-600 transition">Twitter</a>
+  <section id="hero" class="h-screen flex items-center justify-center bg-gray-50 pt-16">
+    <div class="text-center px-6" data-aos="fade-up">
+      <!-- Placeholder profile image -->
+      <img src="https://via.placeholder.com/150" alt="Profile photo" 
+           class="mx-auto rounded-full w-36 h-36 shadow-md hover:shadow-lg transition-shadow"/>
+      <h1 class="mt-6 text-4xl font-bold">Mohammed Bougtab</h1>
+      <p class="mt-2 text-xl text-gray-600">Aspiring Computer Engineering Student</p>
     </div>
   </section>
 
-  <!-- About Me -->
-  <section id="about" class="fade-in-section max-w-4xl mx-auto px-4 py-16 scroll-mt-16 transition-all duration-1000 ease-out">
-    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-    <p class="text-gray-700 mb-4">
-      I am a passionate computer engineering student with solid experience in software development and strong practice in designing and managing relational databases. I am eager to apply my technical skills in a challenging internship starting in July 2025, focusing on innovative and practical projects.
-    </p>
-    <p class="italic text-gray-600">&ldquo;Perseverance is the key to success.&rdquo;</p>
+  <!-- About Me Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-6" data-aos="fade-right">
+      <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+      <p class="text-gray-700 mb-4">
+        Passionate Computer Engineering student with experience in software development and a strong background in design and management of relational databases. I am seeking an internship starting July 2025 to apply my database and programming skills in concrete, innovative projects. Dedicated to continuous learning and teamwork, I enjoy solving complex problems and building useful applications.
+      </p>
+      <p class="text-gray-700">
+        Throughout my studies and projects, I have contributed to data-driven solutions and developed applications using modern technologies. My goal is to leverage skills in Java, Python, and database systems to make a positive impact in the field of information technology.
+      </p>
+    </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience" class="fade-in-section bg-gray-50 px-4 py-16 transition-all duration-1000 ease-out">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-4">Experience</h2>
+  <!-- Experience Section -->
+  <section id="experience" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-6" data-aos="fade-right">Experience</h2>
       <div class="space-y-8">
-        <!-- Experience Item 1 -->
-        <div>
-          <h3 class="text-xl font-bold">Data Analyst Junior <span class="text-gray-600 text-lg"> @ Yola Fresh</span></h3>
-          <p class="text-gray-600 text-sm mb-2">July 2024 &ndash; August 2024, Casablanca</p>
-          <ul class="list-disc list-inside space-y-1 text-gray-700">
-            <li>Created interactive dashboards in Power BI to monitor product quality in warehouses.</li>
-            <li>Developed a mobile app automating the transfer of quality data from warehouses to head office in Excel format.</li>
+        <!-- Data Analyst Junior -->
+        <div data-aos="fade-up">
+          <h3 class="text-xl font-bold">Data Analyst Junior</h3>
+          <p class="italic">Yola Fresh, Casablanca — July 2024 – August 2024</p>
+          <ul class="list-disc list-inside text-gray-700 ml-4 mt-2">
+            <li>Created interactive dashboards using Power BI to monitor product quality in warehouses.</li>
+            <li>Developed a mobile application to automate the transfer of quality data from warehouses to office managers (Excel format).</li>
           </ul>
         </div>
-        <!-- Experience Item 2 -->
-        <div>
-          <h3 class="text-xl font-bold">Census Officer <span class="text-gray-600 text-lg"> @ Haut-Commissariat au Plan</span></h3>
-          <p class="text-gray-600 text-sm mb-2">June 2024, Casablanca</p>
-          <ul class="list-disc list-inside space-y-1 text-gray-700">
-            <li>Conducted household surveys for the 2024 General Population and Housing Census.</li>
-            <li>Communicated effectively with citizens to ensure the quality and accuracy of collected information.</li>
+        <!-- Census Enumerator -->
+        <div data-aos="fade-up">
+          <h3 class="text-xl font-bold">Census Enumerator</h3>
+          <p class="italic">High Commission for Planning (HCP), Casablanca — June 2024</p>
+          <ul class="list-disc list-inside text-gray-700 ml-4 mt-2">
+            <li>Conducted household surveys for the 2024 Population and Housing Census.</li>
+            <li>Communicated effectively with citizens to ensure the accuracy and quality of collected data.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="fade-in-section px-4 py-16 transition-all duration-1000 ease-out">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-4">Projects</h2>
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-6" data-aos="fade-right">Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <!-- Project 1 -->
-        <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-bold mb-2">Quality Tracking Mobile App</h3>
-          <p class="text-gray-600 text-sm mb-2">July 2024 &ndash; August 2024</p>
-          <p class="mb-2">Developed a mobile application for Yola Fresh to transfer product quality data from the warehouse to office personnel (Excel files).</p>
-          <p class="mb-2"><strong>Technologies:</strong> Django (backend), Mobile Development</p>
-          <p class="mb-2">This app streamlined data delivery and improved response time for quality issues.</p>
+        <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition-shadow" data-aos="fade-up">
+          <h3 class="text-2xl font-bold mb-2">Mobile Quality Tracking App</h3>
+          <p class="text-gray-700 mb-2">
+            Developed a mobile application for Yola Fresh to transfer product quality data from warehouses to management in Excel files. Designed and implemented the backend using Django.
+          </p>
+          <p class="font-semibold">Technologies:</p>
+          <p class="text-gray-700">Django, Python, Excel</p>
         </div>
         <!-- Project 2 -->
-        <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-bold mb-2">Multi-Vendor E-commerce Platform</h3>
-          <p class="text-gray-600 text-sm mb-2">March 2025 &ndash; Present</p>
-          <p class="mb-2">Building a multi-vendor e-commerce web application with an admin panel for inventory, sales, and billing management.</p>
-          <p class="mb-2"><strong>Technologies:</strong> Spring Boot, React, MongoDB, Dolibarr Integration</p>
-          <p class="mb-2">Integrating Dolibarr ERP for sales and stock management to provide a comprehensive platform for businesses.</p>
+        <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition-shadow" data-aos="fade-up">
+          <h3 class="text-2xl font-bold mb-2">Multi-Vendor E-commerce Platform</h3>
+          <p class="text-gray-700 mb-2">
+            Ongoing development of a multi-vendor e-commerce web app with an admin panel. Integrated with Dolibarr for sales, invoicing, and inventory management.
+          </p>
+          <p class="font-semibold">Technologies:</p>
+          <p class="text-gray-700">Spring Boot, React, MongoDB, Dolibarr</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Education -->
-  <section id="education" class="fade-in-section bg-gray-50 px-4 py-16 transition-all duration-1000 ease-out">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-4">Education</h2>
-      <ul class="space-y-4 text-gray-700">
-        <li>
-          <strong>Engineering Degree in Computer &amp; Network Engineering</strong>, EMSI, Casablanca (2021 &ndash; 2026)
-        </li>
-        <li>
-          <strong>Political and International Studies</strong>, University Hassan II (FSJES), Casablanca (2023 &ndash; 2026)
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Certifications -->
-  <section id="certifications" class="fade-in-section px-4 py-16 transition-all duration-1000 ease-out">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-4">Certifications</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li>Java SE 17 (Oracle, in progress)</li>
-        <li>Programming for Everybody (Python) - Coursera</li>
-        <li>Software Design &amp; Project Management - Coursera</li>
-        <li>The Unix Workbench - Coursera</li>
-        <li>Database Administration 1 &amp; 2 (Oracle)</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="fade-in-section bg-gray-50 px-4 py-16 transition-all duration-1000 ease-out">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-4">Skills</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div>
-          <h3 class="text-xl font-semibold mb-2">Technical Skills</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-1">
-            <li>Java</li>
-            <li>Python</li>
-            <li>Power BI</li>
-            <li>Spring Boot</li>
-            <li>MySQL / SQL</li>
-            <li>ETL</li>
-          </ul>
+  <!-- Education & Certifications Section -->
+  <section id="education" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-6" data-aos="fade-right">Education & Certifications</h2>
+      <div class="space-y-6">
+        <!-- Education 1 -->
+        <div class="flex justify-between items-start" data-aos="fade-up">
+          <div>
+            <h3 class="text-xl font-bold">Engineering Degree, Computer Science & Networks</h3>
+            <p class="italic">École Marocaine des Sciences de l'Ingénieur (EMSI), Casablanca — 2021–2026</p>
+          </div>
         </div>
-        <div>
-          <h3 class="text-xl font-semibold mb-2">Personal Skills</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-1">
-            <li>Teamwork</li>
-            <li>Management</li>
-            <li>Motivation</li>
+        <!-- Education 2 -->
+        <div class="flex justify-between items-start" data-aos="fade-up">
+          <div>
+            <h3 class="text-xl font-bold">Bachelor in Political Science & International Relations</h3>
+            <p class="italic">Hassan II University (FSJES), Casablanca — 2023–2026</p>
+          </div>
+        </div>
+        <!-- Certifications -->
+        <div data-aos="fade-up">
+          <h3 class="text-xl font-bold">Certifications</h3>
+          <ul class="list-disc list-inside text-gray-700 ml-4 mt-2">
+            <li>Java SE 17 Programmer (Oracle) – In Progress</li>
+            <li>Programming for Everybody: Python (Coursera)</li>
+            <li>Software Engineering: Software Design and Project Management (Coursera)</li>
+            <li>The Unix Workbench (Coursera)</li>
+            <li>Oracle Database Administration 1 & 2 (Oracle)</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Languages -->
-  <section id="languages" class="fade-in-section px-4 py-16 transition-all duration-1000 ease-out">
-    <div class="max-w-4xl mx-auto">
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 bg-white">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8">
+      <!-- Technical Skills -->
+      <div data-aos="fade-right">
+        <h2 class="text-3xl font-semibold mb-4">Technical Skills</h2>
+        <ul class="list-disc list-inside text-gray-700 ml-4">
+          <li>Java</li>
+          <li>Python</li>
+          <li>Spring Boot</li>
+          <li>Power BI</li>
+          <li>MySQL / SQL</li>
+          <li>ETL</li>
+        </ul>
+      </div>
+      <!-- Personal Skills -->
+      <div data-aos="fade-left">
+        <h2 class="text-3xl font-semibold mb-4">Personal Skills</h2>
+        <ul class="list-disc list-inside text-gray-700 ml-4">
+          <li>Teamwork</li>
+          <li>Communication</li>
+          <li>Management</li>
+          <li>Motivation</li>
+          <li>Problem-Solving</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages Section -->
+  <section id="languages" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6" data-aos="fade-right">
       <h2 class="text-3xl font-semibold mb-4">Languages</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-1">
-        <li><strong>Arabic:</strong> Native</li>
-        <li><strong>French:</strong> Intermediate (B1)</li>
-        <li><strong>English:</strong> Intermediate (B1)</li>
+      <ul class="list-disc list-inside text-gray-700 ml-4">
+        <li>Arabic: Native</li>
+        <li>French: Intermediate (B1)</li>
+        <li>English: Intermediate (B1)</li>
       </ul>
     </div>
   </section>
 
-  <!-- Footer / Contact -->
-  <footer id="contact" class="fade-in-section bg-gray-800 text-white text-center px-4 py-6 scroll-mt-16 transition-all duration-1000 ease-out">
-    <p class="mb-2">Contact: 
-      <a href="mailto:bougtab.mohammed03@gmail.com" class="hover:text-blue-400">Email</a> |
-      <a href="https://linkedin.com/in/mohammed-bougtab-6430141b0" target="_blank" class="hover:text-blue-400">LinkedIn</a> |
-      <a href="https://github.com/BougtabMohammed" target="_blank" class="hover:text-blue-400">GitHub</a> |
-      <a href="https://x.com/MohammedBougtab" target="_blank" class="hover:text-blue-400">Twitter</a>
-    </p>
-    <p>© 2025 Mohammed Bougtab</p>
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-4" data-aos="fade-right">Contact Me</h2>
+      <p class="text-gray-700 mb-6">
+        Feel free to reach out by filling the form below or sending an email to 
+        <a href="mailto:bougtab.mohammed03@gmail.com" class="text-blue-600">bougtab.mohammed03@gmail.com</a>.
+      </p>
+      <!-- Contact Form (Formspree example) -->
+      <form action="https://formspree.io/f/{your_form_id}" method="POST" class="space-y-4 max-w-lg">
+        <div>
+          <label class="block text-gray-700">Name:</label>
+          <input type="text" name="name" required class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
+        </div>
+        <div>
+          <label class="block text-gray-700">Email:</label>
+          <input type="email" name="email" required class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
+        </div>
+        <div>
+          <label class="block text-gray-700">Message:</label>
+          <textarea name="message" rows="4" required class="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">Send Message</button>
+      </form>
+      <!-- Note: Replace '{your_form_id}' with your actual Formspree ID or configure EmailJS -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-50">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-gray-600">© 2025 Mohammed Bougtab. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- Link to external script -->
-  <script src="script.js"></script>
+  <!-- AOS (Animate on Scroll) JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initialize AOS for scroll animations
+    AOS.init({ once: true });
+
+    // Mobile menu toggle logic
+    const btn = document.getElementById('menu-button');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
